@@ -153,16 +153,6 @@ elsif distro.include?("Fedora")
   ascii = File.read("#{logos}fedora")
   puts ascii
 
-elsif distro.include?("FreeBSD")
-  puts "\e[1m\e[31m"+user
-  puts "\e[1m\e[31mdistro\e[0m "+distro
-  puts "\e[1m\e[31mkernel\e[0m "+kernel
-  puts "\e[1m\e[31mshell\e[0m "+shell
-  puts "\e[1m\e[31muptime\e[0m "+uptime
-  puts "\e[1m\e[31mmemory\e[0m "+memory
-  ascii = File.read("#{logos}freebsd")
-  puts ascii
-
 elsif distro.include?("Android")
   puts "\e[1m\e[32m"+user
   puts "\e[1m\e[32mdistro\e[0m "+distro
@@ -181,16 +171,6 @@ elsif distro.include?("Haiku")
   puts "\e[1m\e[31muptime\e[0m "+uptime
   puts "\e[1m\e[31mmemory\e[0m "+memory
   ascii = File.read("#{logos}haiku")
-  puts ascii
-
-elsif distro.include?("NetBSD")
-  puts "\e[1m\e[31m"+user
-  puts "\e[1m\e[31mdistro\e[0m "+distro
-  puts "\e[1m\e[31mkernel\e[0m "+kernel
-  puts "\e[1m\e[31mshell\e[0m "+shell
-  puts "\e[1m\e[31muptime\e[0m "+uptime
-  puts "\e[1m\e[31mmemory\e[0m "+memory
-  ascii = File.read("#{logos}netbsd")
   puts ascii
 
 elsif distro.include?("macOS")
