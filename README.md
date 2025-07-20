@@ -12,7 +12,7 @@ gem install rake
 git clone https://github.com/kapijawastaken/rubyfetch
 sudo rake (your OS)
 rubyfetch
-
+```
 # OS Selection
 To actually install this, you will need to select your OS. The available options are:
 linux_x86_64_glibc
