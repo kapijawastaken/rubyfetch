@@ -138,7 +138,6 @@ task :netbsd_x86_64 do
   print "Copying logos..."
   `cp -r ./src/logos /usr/local/share/rubyfetch/`
   puts "done"
-
 end
 
 task :netbsd_arm64 do
@@ -160,7 +159,6 @@ task :netbsd_arm64 do
   print "Copying logos..."
   `cp -r ./src/logos /usr/local/share/rubyfetch/`
   puts "done"
-
 end
 
 task :openbsd_x86_64 do
@@ -179,7 +177,6 @@ task :openbsd_x86_64 do
   print "Copying logos..."
   `cp -r ./src/logos /usr/local/share/rubyfetch/`
   puts "done"
-
 end
 
 task :openbsd_arm64 do
@@ -201,7 +198,6 @@ task :openbsd_arm64 do
   print "Copying logos..."
   `cp -r ./src/logos /usr/local/share/rubyfetch/`
   puts "done"
-
 end
 
 task :openindiana_x86_64 do
