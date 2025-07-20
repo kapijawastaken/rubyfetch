@@ -1,5 +1,6 @@
+#!/usr/local/share/rubyfetch/ruby_linux_x86_64_glibc
 # vars
-logos = File.expand_path(File.read(File.expand_path("~/.config/rubyfetch/config")).gsub(/^#.+/, "").gsub("dir ", "").strip)+"/"
+logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
@@ -7,12 +8,6 @@ shell = ENV["SHELL"].gsub(/^.+\//, "")
 #=begin
 if `uname -a`.include?("Android")
   distro = "Android"
-elsif `uname`.strip == "Haiku"
-  distro = "Haiku"
-elsif `uname -a`.include?("openindiana")
-  distro = "openindiana"
-elsif `uname`.strip == "Darwin"
-  distro = "macOS"
 else
   distro = File.read("/etc/os-release").gsub(/^(?!.*PRETTY_NAME=).*/, "").strip.gsub("PRETTY_NAME=", "").gsub("\"", "")
 end
@@ -163,6 +158,7 @@ elsif distro.include?("Android")
   ascii = File.read("#{logos}android")
   puts ascii
 
+=begin
 elsif distro.include?("Haiku")
   puts "\e[1m\e[33m"+user
   puts "\e[1m\e[33mdistro\e[0m "+distro
@@ -172,16 +168,7 @@ elsif distro.include?("Haiku")
   puts "\e[1m\e[31mmemory\e[0m "+memory
   ascii = File.read("#{logos}haiku")
   puts ascii
-
-elsif distro.include?("macOS")
-  puts "\e[1m"+user
-  puts "\e[1mdistro\e[0m "+distro
-  puts "\e[1mkernel\e[0m "+kernel
-  puts "\e[1mshell\e[0m "+shell
-  puts "\e[1muptime\e[0m "+uptime
-  puts "\e[1mmemory\e[0m "+memory
-  ascii = File.read("#{logos}macos")
-  puts ascii
+=end
 
 elsif distro.include?("Solus")
   puts "\e[1m\e[34m"+user
@@ -231,16 +218,6 @@ elsif distro.include?("Mageia")
   puts "\e[1m\e[36muptime\e[0m "+uptime
   puts "\e[1m\e[36mmemory\e[0m "+memory
   ascii = File.read("#{logos}mageia")
-  puts ascii
-
-elsif distro.include?("openindiana")
-  puts "\e[1m\e[34m"+user
-  puts "\e[1m\e[34mdistro\e[0m "+distro
-  puts "\e[1m\e[34mkernel\e[0m "+kernel
-  puts "\e[1m\e[34mshell\e[0m "+shell
-  puts "\e[1m\e[34muptime\e[0m "+uptime
-  puts "\e[1m\e[34mmemory\e[0m "+memory
-  ascii = File.read("#{logos}openindiana")
   puts ascii
 
 elsif distro.include?("Artix")

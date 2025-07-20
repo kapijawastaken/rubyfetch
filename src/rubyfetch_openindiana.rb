@@ -1,11 +1,11 @@
-#!/Library/Application\ Support/rubyfetch/ruby_macos_x86_64
+#!/usr/local/share/rubyfetch/ruby_openindiana_x86_64
 # vars
-logos = "/Library/Application\ Support/rubyfetch/logos/"
+logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
 # distro
-distro = `sw_vers -productName`.strip+" "+`sw_vers -productVersion`
+distro = "openindiana"
 # uptime
 up = `uptime`.strip.gsub(/^.*up/, "").strip.gsub(/\s\s.*/, "").gsub(/,/, "").gsub(":", " hours ").gsub(/^0\shours/, "").gsub(" 1 hours", " 1 hour").gsub("min", "").strip.gsub(" 0", " ")+" mins"
 uptime = up.gsub("01", "1").gsub("02", "2").gsub("03", "3").gsub("04", "4").gsub("05", "5").gsub("06", "6").gsub("07", "7").gsub("08", "8").gsub("09", "9").gsub(" 1 mins", " 1 min").gsub(" 1 days", "1 day").gsub("00 mins", "0 mins")
@@ -22,11 +22,11 @@ at_exit do
 end
 
 # ascii art
-  puts "\e[1m"+user
-  puts "\e[1mdistro\e[37m "+distro
-  puts "\e[1mkernel\e[37m "+kernel
-  puts "\e[1mshell\e[37m "+shell
-  puts "\e[1muptime\e[37m "+uptime
-  puts "\e[1mmemory\e[37m "+memory
-  ascii = File.read("#{logos}macos")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}openindiana")
   puts ascii

@@ -1,5 +1,5 @@
 # vars
-logos = File.expand_path(File.read(File.expand_path("~/.config/rubyfetch/config")).gsub(/^#.+/, "").gsub("dir ", "").strip)+"/"
+logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
