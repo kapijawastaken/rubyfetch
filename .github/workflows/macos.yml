@@ -16,6 +16,11 @@ jobs:
           brew update
           brew install openssl readline libyaml autoconf automake bison libffi
 
+      - name: Install Rust (required for YJIT)
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
       - name: Clone Ruby with YJIT
         run: |
           git clone https://github.com/ruby/ruby yjit
@@ -38,7 +43,7 @@ jobs:
       - name: Copy miniruby into repo as ruby_macos_x86_64
         run: |
           mkdir -p "$GITHUB_WORKSPACE/src"
-          cp miniruby "$GITHUB_WORKSPACE/src/"
+          cp yjit/miniruby "$GITHUB_WORKSPACE/src/ruby_macos_x86_64"
 
       - name: Commit and push to repo
         run: |
