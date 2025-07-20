@@ -16,7 +16,7 @@ rubyfetch
 # OS Selection
 To actually install this, you will need to select your OS. The available options are:
 * linux_x86_64_glibc
-* linux_x86_64_musl (doesnt work)
+* linux_x86_64_musl
 * linux_arm64_glibc
 * linux_arm64_musl
 * macos_x86_64 (doesnt work)
