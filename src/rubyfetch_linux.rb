@@ -230,6 +230,196 @@ elsif distro.include?("Artix")
   ascii = File.read("#{logos}artix")
   puts ascii
 
+elsif distro.include?("OpenMandriva")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}openmandriva")
+  puts ascii
+
+elsif distro.include?("Alma")
+  puts "\e[1m\e[33m"+user
+  puts "\e[1m\e[33mdistro\e[0m "+distro
+  puts "\e[1m\e[33mkernel\e[0m "+kernel
+  puts "\e[1m\e[31mshell\e[0m "+shell
+  puts "\e[1m\e[31muptime\e[0m "+uptime
+  puts "\e[1m\e[31mmemory\e[0m "+memory
+  ascii = File.read("#{logos}alma")
+  puts ascii
+
+elsif distro.include?("Red Hat")
+  puts "\e[1m\e[31m"+user
+  puts "\e[1m\e[31mdistro\e[0m "+distro
+  puts "\e[1m\e[31mkernel\e[0m "+kernel
+  puts "\e[1m\e[31mshell\e[0m "+shell
+  puts "\e[1m\e[31muptime\e[0m "+uptime
+  puts "\e[1m\e[31mmemory\e[0m "+memory
+  ascii = File.read("#{logos}rhel")
+  puts ascii
+
+elsif distro.include?("CentOS")
+  puts "\e[1m\e[32m"+user
+  puts "\e[1m\e[32mdistro\e[0m "+distro
+  puts "\e[1m\e[32mkernel\e[0m "+kernel
+  puts "\e[1m\e[32mshell\e[0m "+shell
+  puts "\e[1m\e[32muptime\e[0m "+uptime
+  puts "\e[1m\e[32mmemory\e[0m "+memory 
+  ascii = File.read("#{logos}centos")
+  puts ascii
+
+elsif distro.include?("Ubuntu MATE")
+  puts "\e[1m\e[32m"+user
+  puts "\e[1m\e[32mdistro\e[0m "+distro
+  puts "\e[1m\e[32mkernel\e[0m "+kernel
+  puts "\e[1m\e[32mshell\e[0m "+shell
+  puts "\e[1m\e[32muptime\e[0m "+uptime
+  puts "\e[1m\e[32mmemory\e[0m "+memory 
+  ascii = File.read("#{logos}ubuntu_mate")
+  puts ascii
+
+elsif distro.include?("KaOS")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}kaos")
+  puts ascii
+
+elsif distro.include?("PCLinuxOS")
+  puts "\e[1m"+user
+  puts "\e[1mdistro\e[0m "+distro
+  puts "\e[1mkernel\e[0m "+kernel
+  puts "\e[1mshell\e[0m "+shell
+  puts "\e[1muptime\e[0m "+uptime
+  puts "\e[1mmemory\e[0m "+memory
+  ascii = File.read("#{logos}pclinuxos")
+  puts ascii
+
+elsif distro.include?("CachyOS")
+  puts "\e[1m\e[36m"+user
+  puts "\e[1m\e[36mdistro\e[0m "+distro
+  puts "\e[1m\e[36mkernel\e[0m "+kernel
+  puts "\e[1m\e[36mshell\e[0m "+shell
+  puts "\e[1m\e[36muptime\e[0m "+uptime
+  puts "\e[1m\e[36mmemory\e[0m "+memory
+  ascii = File.read("#{logos}cachyos")
+  puts ascii
+
+elsif distro.include?("SteamOS")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}steamos")
+  puts ascii
+
+elsif distro.include?("Silverblue")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}silverblue")
+  puts ascii
+
+elsif distro.include?("Leap")
+  puts "\e[1m\e[32m"+user
+  puts "\e[1m\e[32mdistro\e[0m "+distro
+  puts "\e[1m\e[32mkernel\e[0m "+kernel
+  puts "\e[1m\e[32mshell\e[0m "+shell
+  puts "\e[1m\e[32muptime\e[0m "+uptime
+  puts "\e[1m\e[32mmemory\e[0m "+memory 
+  ascii = File.read("#{logos}leap")
+  puts ascii
+
+elsif distro.include?("Nitrux")
+  puts "\e[1m\e[34m"+user
+  puts "\e[1m\e[34mdistro\e[0m "+distro
+  puts "\e[1m\e[34mkernel\e[0m "+kernel
+  puts "\e[1m\e[34mshell\e[0m "+shell
+  puts "\e[1m\e[34muptime\e[0m "+uptime
+  puts "\e[1m\e[34mmemory\e[0m "+memory
+  ascii = File.read("#{logos}nitrux")
+  puts ascii
+
+elsif distro.include?("Guix")
+  puts "\e[1m\e[33m"+user
+  puts "\e[1m\e[33mdistro\e[0m "+distro
+  puts "\e[1m\e[33mkernel\e[0m "+kernel
+  puts "\e[1m\e[33mshell\e[0m "+shell
+  puts "\e[1m\e[33muptime\e[0m "+uptime
+  puts "\e[1m\e[33mmemory\e[0m "+memory
+  ascii = File.read("#{logos}guix")
+  puts ascii
+
+elsif distro.include?("CRUX")
+  puts "\e[1m\e[35m"+user
+  puts "\e[1m\e[35mdistro\e[0m "+distro
+  puts "\e[1m\e[35mkernel\e[0m "+kernel
+  puts "\e[1m\e[35mshell\e[0m "+shell
+  puts "\e[1m\e[35muptime\e[0m "+uptime
+  puts "\e[1m\e[35mmemory\e[0m "+memory
+  ascii = File.read("#{logos}crux")
+  puts ascii
+
+elsif distro.include?("KISS")
+  puts "\e[1m\e[35m"+user
+  puts "\e[1m\e[35mdistro\e[0m "+distro
+  puts "\e[1m\e[35mkernel\e[0m "+kernel
+  puts "\e[1m\e[35mshell\e[0m "+shell
+  puts "\e[1m\e[35muptime\e[0m "+uptime
+  puts "\e[1m\e[35mmemory\e[0m "+memory
+  ascii = File.read("#{logos}kiss")
+  puts ascii
+
+elsif distro.include?("Archcraft")
+  puts "\e[1m\e[36m"+user
+  puts "\e[1m\e[36mdistro\e[0m "+distro
+  puts "\e[1m\e[36mkernel\e[0m "+kernel
+  puts "\e[1m\e[36mshell\e[0m "+shell
+  puts "\e[1m\e[36muptime\e[0m "+uptime
+  puts "\e[1m\e[36mmemory\e[0m "+memory
+  ascii = File.read("#{logos}archcraft")
+  puts ascii
+
+elsif distro.include?("PikaOS")
+  puts "\e[1m\e[33m"+user
+  puts "\e[1m\e[33mdistro\e[0m "+distro
+  puts "\e[1m\e[33mkernel\e[0m "+kernel
+  puts "\e[1m\e[33mshell\e[0m "+shell
+  puts "\e[1m\e[33muptime\e[0m "+uptime
+  puts "\e[1m\e[33mmemory\e[0m "+memory
+  ascii = File.read("#{logos}pikaos")
+  puts ascii
+
+elsif distro.include?("antiX")
+  puts "\e[1m\e[31m"+user
+  puts "\e[1m\e[31mdistro\e[0m "+distro
+  puts "\e[1m\e[31mkernel\e[0m "+kernel
+  puts "\e[1m\e[31mshell\e[0m "+shell
+  puts "\e[1m\e[31muptime\e[0m "+uptime
+  puts "\e[1m\e[31mmemory\e[0m "+memory
+  ascii = File.read("#{logos}antix")
+  puts ascii
+
+elsif distro.include?("Devuan")
+  puts "\e[1m\e[35m"+user
+  puts "\e[1m\e[35mdistro\e[0m "+distro
+  puts "\e[1m\e[35mkernel\e[0m "+kernel
+  puts "\e[1m\e[35mshell\e[0m "+shell
+  puts "\e[1m\e[35muptime\e[0m "+uptime
+  puts "\e[1m\e[35mmemory\e[0m "+memory
+  ascii = File.read("#{logos}devuan")
+  puts ascii
+
 else
   puts "\e[1m"+user
   puts "\e[1mdistro\e[0m "+distro
