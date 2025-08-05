@@ -24,8 +24,6 @@ To actually install this, you will need to select your OS. The available options
 * freebsd_arm64 (doesnt work)
 * netbsd_x86_64 (doesnt work)
 * netbsd_arm64 (doesnt work)
-* openbsd_x86_64 (doesnt work)
-* openbsd_arm64 (doesnt work)
 * openindiana_x86_64 (doesnt work)
 * haiku_x86_64 (doesnt work)
 * windows_x86_64 (doesnt work)
