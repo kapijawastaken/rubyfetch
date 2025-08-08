@@ -158,18 +158,6 @@ elsif distro.include?("Android")
   ascii = File.read("#{logos}android")
   puts ascii
 
-=begin
-elsif distro.include?("Haiku")
-  puts "\e[1m\e[33m"+user
-  puts "\e[1m\e[33mdistro\e[0m "+distro
-  puts "\e[1m\e[33mkernel\e[0m "+kernel
-  puts "\e[1m\e[31mshell\e[0m "+shell
-  puts "\e[1m\e[31muptime\e[0m "+uptime
-  puts "\e[1m\e[31mmemory\e[0m "+memory
-  ascii = File.read("#{logos}haiku")
-  puts ascii
-=end
-
 elsif distro.include?("Solus")
   puts "\e[1m\e[34m"+user
   puts "\e[1m\e[34mdistro\e[0m "+distro

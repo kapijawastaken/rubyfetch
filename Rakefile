@@ -143,10 +143,6 @@ task :openindiana do
   puts "done"
 end
 
-task :haiku_x86_64 do
-
-end
-
 task :macos_x86_64 do
   puts "Creating dir..."
   `mkdir /usr/local/share/rubyfetch`
