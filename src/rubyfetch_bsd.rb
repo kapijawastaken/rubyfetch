@@ -1,3 +1,4 @@
+#!/usr/local/bin/ruby
 # vars
 logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"

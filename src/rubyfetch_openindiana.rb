@@ -1,4 +1,4 @@
-#!/usr/local/share/rubyfetch/ruby_openindiana_x86_64
+#!/usr/bin/ruby
 # vars
 logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
