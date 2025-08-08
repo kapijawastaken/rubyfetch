@@ -4,7 +4,8 @@ A blazing fast sysfetch written in Ruby!
 
 
 # Requirements
-ruby
+* ruby
+* rake
 
 # Instructions
 ```
