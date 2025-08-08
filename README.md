@@ -20,17 +20,9 @@ To actually install this, you will need to select your OS. The available options
 * linux_arm64_glibc
 * linux_arm64_musl
 * macos_x86_64 (doesnt work)
-<<<<<<< HEAD
 * freebsd
 * netbsd
 * openbsd
 * openindiana
-=======
-* freebsd_x86_64 (doesnt work)
-* freebsd_arm64 (doesnt work)
-* netbsd_x86_64 (doesnt work)
-* netbsd_arm64 (doesnt work)
-* openindiana_x86_64 (doesnt work)
->>>>>>> e3ef08acaf317cad71a17801280aa67c2e55580e
 * haiku_x86_64 (doesnt work)
 * windows_x86_64 (doesnt work)
