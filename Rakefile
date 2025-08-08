@@ -113,42 +113,22 @@ task :netbsd do
   puts "done"
 end
 
-<<<<<<< HEAD
 task :openbsd do
-=======
-task :netbsd_arm64 do
->>>>>>> e3ef08acaf317cad71a17801280aa67c2e55580e
   puts "Creating dir..."
   `mkdir /usr/local/share/rubyfetch`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_bsd.rb /usr/local/share/rubyfetch/`
   puts "done"
-<<<<<<< HEAD
   print "Moving rubyfetch..."
   `mv /usr/local/share/rubyfetch/rubyfetch_bsd.rb /usr/local/bin/rubyfetch`
   puts "done"
-=======
-  print "Modifying rubyfetch..."
-  File.write("/usr/local/share/rubyfetch/rubyfetch_bsd.rb", File.read("/usr/local/share/rubyfetch/rubyfetch_bsd.rb").sub("x86_64", "arm64"))
-  puts "done"
-  print "Moving rubyfetch..."
-  `mv /usr/local/share/rubyfetch/rubyfetch_bsd.rb /usr/local/bin/rubyfetch`
-  puts "done"
-  print "Copying ruby executable..."
-  `cp ./src/ruby_netbsd_arm64 /usr/local/share/rubyfetch/`
-  puts "done"
->>>>>>> e3ef08acaf317cad71a17801280aa67c2e55580e
   print "Copying logos..."
   `cp -r ./src/logos /usr/local/share/rubyfetch/`
   puts "done"
 end
 
-<<<<<<< HEAD
 task :openindiana do
-=======
-task :openindiana_x86_64 do
->>>>>>> e3ef08acaf317cad71a17801280aa67c2e55580e
   puts "Creating dir..."
   `mkdir /usr/local/share/rubyfetch`
   puts "done"
