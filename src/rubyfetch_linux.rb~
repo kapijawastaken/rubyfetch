@@ -14,21 +14,44 @@ end
 #=end
 # uptime
 seconds = File.read("/proc/uptime").gsub(/\..+/, "").strip.to_i
-years = seconds / 31536000
-days = (seconds % 31536000) / 86400
-hours = (seconds % 86400) / 3600
-minutes = (seconds % 3600) / 60
-secs = seconds % 60
+minutes = seconds / 60
+hours = seconds / 3600
+if minutes < 1 && seconds > 1  # ? secs
+  uptime = seconds.to_s+" secs"
+elsif seconds == 0  # 0 secs
+  uptime = "0 secs"
+elsif seconds == 1  # 1 sec
+  uptime = "1 sec"
+elsif minutes == 1 # 1 min
+  uptime = "1 min"
+elsif seconds == 61 # 1 min 1 sec
+  uptime = "1 min 1 sec"
+elsif 2 > minutes && seconds > 61 # 1 min ? secs
+  uptime = "1 min #{seconds % 60} secs"
+elsif 3600 > seconds && seconds > 120 && seconds % 60 != 0 && seconds % 60 != 1 # ? mins ? secs
+  uptime = "#{minutes} mins #{seconds % 60} secs"
+elsif 3600 > seconds && minutes >= 2 && seconds % 60 = 0  # ? mins
+  uptime = "#{minutes} mins"
+elsif 3600 > seconds && seconds > 120 && seconds % 60 = 1  # ? mins 1 sec
+  uptime = "#{seconds / 60} mins 1 sec"
+elsif hours == 1 # 1 hour
+  uptime = "1 hour"
+elsif seconds == 3601 # 1 hour 1 sec
+  uptime = "1 hour 1 sec"
+elsif 3660 > seconds && seconds > 3601  # 1 hour ? secs
+  uptime = "1 hour #{seconds % 3600} secs"
+elsif seconds == 3661
+  uptime = "1 hour 1 min 1 sec" # 1 hour 1 min 1 sec
+elsif seconds > 3720 && seconds > 3661
+  uptime = "1 hour 1 min #{seconds % 60} secs" # 1 hour 1 min ? secs
+else 
+  uptime = "bogus"
+end
 
-parts = []
-
-parts << "#{years} #{years == 1 ? 'year' : 'years'}" if years > 0
-parts << "#{days} #{days == 1 ? 'day' : 'days'}" if days > 0
-parts << "#{hours} #{hours == 1 ? 'hour' : 'hours'}" if hours > 0
-parts << "#{minutes} #{minutes == 1 ? 'min' : 'mins'}" if minutes > 0
-parts << "#{secs} #{secs == 1 ? 'sec' : 'secs'}" if secs > 0
-
-uptime = parts.empty? ? "0 secs" : parts.join(" ")
+=begin 
+up = `uptime`.strip.gsub(/^.*up/, "").strip.gsub(/\s\s.*/, "").gsub(/,/, "").gsub(":", " hours ").gsub(/^0\shours/, "").gsub(" 1 hours", " 1 hour").gsub("min", "").strip.gsub(" 0", " ")+" mins"
+uptime = up.gsub("01", "1").gsub("02", "2").gsub("03", "3").gsub("04", "4").gsub("05", "5").gsub("06", "6").gsub("07", "7").gsub("08", "8").gsub("09", "9").gsub("1 mins", "1 min").gsub("1 days", "1 day").gsub("00 mins", "0 mins")
+=end
 # memory (it works so dont complain)
 mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
