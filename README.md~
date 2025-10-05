@@ -24,4 +24,5 @@ To actually install this, you will need to select your OS. The available options
 * freebsd
 * netbsd
 * openbsd
+* openindiana
 * windows_x86_64 (doesnt work)
