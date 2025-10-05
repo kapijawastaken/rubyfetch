@@ -7,8 +7,23 @@ shell = ENV["SHELL"].gsub(/^.+\//, "")
 # distro
 distro = `sw_vers -productName`.strip+" "+`sw_vers -productVersion`
 # uptime
-up = `uptime`.strip.gsub(/^.*up/, "").strip.gsub(/\s\s.*/, "").gsub(/,/, "").gsub(":", " hours ").gsub(/^0\shours/, "").gsub(" 1 hours", " 1 hour").gsub("min", "").strip.gsub(" 0", " ")+" mins"
-uptime = up.gsub("01", "1").gsub("02", "2").gsub("03", "3").gsub("04", "4").gsub("05", "5").gsub("06", "6").gsub("07", "7").gsub("08", "8").gsub("09", "9").gsub("1 mins", "1 min").gsub("1 days", "1 day").gsub("00 mins", "0 mins")
+boot_time = `sysctl -n kern.boottime`.match(/sec = (\d+)/)[1].to_i
+seconds = Time.now.to_i - boot_time
+years = seconds / 31536000
+days = (seconds % 31536000) / 86400
+hours = (seconds % 86400) / 3600
+minutes = (seconds % 3600) / 60
+secs = seconds % 60
+
+parts = []
+
+parts << "#{years} #{years == 1 ? 'year' : 'years'}" if years > 0
+parts << "#{days} #{days == 1 ? 'day' : 'days'}" if days > 0
+parts << "#{hours} #{hours == 1 ? 'hour' : 'hours'}" if hours > 0
+parts << "#{minutes} #{minutes == 1 ? 'min' : 'mins'}" if minutes > 0
+parts << "#{secs} #{secs == 1 ? 'sec' : 'secs'}" if secs > 0
+
+uptime = parts.empty? ? "0 secs" : parts.join(" ")
 # memory (it works so dont complain)
 mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
