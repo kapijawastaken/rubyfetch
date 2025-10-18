@@ -3,8 +3,9 @@ task :default do
 end
 
 task :linux_x86_64_glibc do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_linux.rb ~/.local/share/rubyfetch/`
@@ -24,8 +25,9 @@ task :linux_x86_64_glibc do
 end
 
 task :linux_x86_64_musl do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_linux.rb ~/.local/share/rubyfetch/`
@@ -46,8 +48,9 @@ task :linux_x86_64_musl do
 end
 
 task :linux_arm64_glibc do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_linux.rb ~/.local/share/rubyfetch/`
@@ -68,8 +71,9 @@ task :linux_arm64_glibc do
 end
 
 task :linux_arm64_musl do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_linux.rb ~/.local/share/rubyfetch/`
@@ -91,8 +95,9 @@ task :linux_arm64_musl do
 end
 
 task :bsd do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_bsd.rb ~/.local/share/rubyfetch/`
@@ -106,8 +111,9 @@ task :bsd do
 end
 
 task :macos do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_macos.rb ~/.local/share/rubyfetch/`
@@ -121,8 +127,9 @@ task :macos do
 end
 
 task :android do
-  puts "Creating dir..."
+  puts "Creating dirs..."
   `mkdir ~/.local/share/rubyfetch`
+  `mkdir ~/.local/bin`
   puts "done"
   print "Copying rubyfetch..."
   `cp ./src/rubyfetch_android.rb ~/.local/share/rubyfetch/`
