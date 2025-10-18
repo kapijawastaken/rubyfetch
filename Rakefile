@@ -120,6 +120,21 @@ task :macos do
   puts "done"
 end
 
+task :android do
+  puts "Creating dir..."
+  `mkdir ~/.local/share/rubyfetch`
+  puts "done"
+  print "Copying rubyfetch..."
+  `cp ./src/rubyfetch_android.rb ~/.local/share/rubyfetch/`
+  puts "done"
+  print "Moving rubyfetch..."
+  `mv ~/.local/share/rubyfetch/rubyfetch_android.rb ~/.local/bin/rubyfetch`
+  puts "done"
+  print "Copying logos..."
+  `cp -r ./src/logos ~/.local/share/rubyfetch/`
+  puts "done"
+end
+
 task :windows_x86_64 do
 
 end
