@@ -1,17 +1,11 @@
-#!/usr/local/share/rubyfetch/ruby_linux_x86_64_glibc
+#!$HOME/.local/share/rubyfetch/ruby_linux_x86_64_glibc
 # vars
 logos = "/usr/local/share/rubyfetch/logos/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
 # distro
-#=begin
-if `uname -a`.include?("Android")
-  distro = "Android"
-else
-  distro = File.read("/etc/os-release").gsub(/^(?!.*PRETTY_NAME=).*/, "").strip.gsub("PRETTY_NAME=", "").gsub("\"", "")
-end
-#=end
+distro = File.read("/etc/os-release").gsub(/^(?!.*PRETTY_NAME=).*/, "").strip.gsub("PRETTY_NAME=", "").gsub("\"", "")
 # uptime
 seconds = File.read("/proc/uptime").gsub(/\..+/, "").strip.to_i
 years = seconds / 31536000
@@ -160,16 +154,6 @@ elsif distro.include?("Fedora")
   puts "\e[1m\e[34muptime\e[0m "+uptime
   puts "\e[1m\e[34mmemory\e[0m "+memory
   ascii = File.read("#{logos}fedora")
-  puts ascii
-
-elsif distro.include?("Android")
-  puts "\e[1m\e[32m"+user
-  puts "\e[1m\e[32mdistro\e[0m "+distro
-  puts "\e[1m\e[32mkernel\e[0m "+kernel
-  puts "\e[1m\e[32mshell\e[0m "+shell
-  puts "\e[1m\e[32muptime\e[0m "+uptime
-  puts "\e[1m\e[32mmemory\e[0m "+memory 
-  ascii = File.read("#{logos}android")
   puts ascii
 
 elsif distro.include?("Solus")

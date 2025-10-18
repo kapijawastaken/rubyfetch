@@ -1,6 +1,6 @@
-#!/Library/Application\ Support/rubyfetch/ruby_macos_x86_64
+#!/usr/bin/ruby
 # vars
-logos = "/Library/Application\ Support/rubyfetch/logos/"
+logos = File.expand_path("~/Library/Application\ Support/rubyfetch/logos/")+"/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")

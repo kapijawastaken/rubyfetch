@@ -1,6 +1,6 @@
 #!/usr/local/bin/ruby
 # vars
-logos = "/usr/local/share/rubyfetch/logos/"
+logos = File.expand_path("~/.local/share/rubyfetch/logos/")
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
