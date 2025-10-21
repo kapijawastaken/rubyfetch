@@ -7,7 +7,7 @@ shell = ENV["SHELL"].gsub(/^.+\//, "")
 distro = "Android"
 
 # uptime
-uptime = `uptime -p`.strip.gsub(",", "").gsub(/^up /, "")
+uptime = `uptime -p`.strip.gsub(",", "").sub(/^up /, "")
 
 # memory (it works so dont complain)
 mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')

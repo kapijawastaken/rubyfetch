@@ -11,7 +11,7 @@ task :linux_x86_64_glibc do
   `cp ./src/rubyfetch_linux.rb ~/.local/share/rubyfetch/`
   puts "done"
   print "Modifying rubyfetch..."
-  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$USER", ENV["USER"]))
+  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$HOME", ENV["HOME"]))
   puts "done"
   print "Moving rubyfetch..."
   `mv ~/.local/share/rubyfetch/rubyfetch_linux.rb ~/.local/bin/rubyfetch`
@@ -34,7 +34,7 @@ task :linux_x86_64_musl do
   puts "done"
   print "Modifying rubyfetch..."
   File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("glibc", "musl"))
-  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$USER", ENV["USER"]))
+  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$HOME", ENV["HOME"]))
   puts "done"
   print "Moving rubyfetch..."
   `mv ~/.local/share/rubyfetch/rubyfetch_linux.rb ~/.local/bin/rubyfetch`
@@ -57,7 +57,7 @@ task :linux_arm64_glibc do
   puts "done"
   print "Modifying rubyfetch..."
   File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("x86_64", "arm64"))
-  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$USER", ENV["USER"]))
+  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$HOME", ENV["HOME"]))
   puts "done"
   print "Moving rubyfetch..."
   `mv ~/.local/share/rubyfetch/rubyfetch_linux.rb ~/.local/bin/rubyfetch`
@@ -80,7 +80,7 @@ task :linux_arm64_musl do
   puts "done"
   print "Modifying rubyfetch..."
   File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("x86_64", "arm64").sub("glibc", "musl"))
-  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$USER", ENV["USER"]))
+  File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("$HOME", ENV["HOME"]))
   File.write(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb"), File.read(File.expand_path("~/.local/share/rubyfetch/rubyfetch_linux.rb")).sub("glibc", "musl"))
   puts "done"
   print "Moving rubyfetch..."

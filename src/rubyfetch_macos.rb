@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 # vars
-logos = File.expand_path("~/Library/Application\ Support/rubyfetch/logos/")+"/"
+logos = File.expand_path("~/.local/share/rubyfetch/logos/")+"/"
 user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
@@ -13,7 +13,6 @@ years = seconds / 31536000
 days = (seconds % 31536000) / 86400
 hours = (seconds % 86400) / 3600
 minutes = (seconds % 3600) / 60
-secs = seconds % 60
 
 parts = []
 
@@ -21,9 +20,8 @@ parts << "#{years} #{years == 1 ? 'year' : 'years'}" if years > 0
 parts << "#{days} #{days == 1 ? 'day' : 'days'}" if days > 0
 parts << "#{hours} #{hours == 1 ? 'hour' : 'hours'}" if hours > 0
 parts << "#{minutes} #{minutes == 1 ? 'min' : 'mins'}" if minutes > 0
-parts << "#{secs} #{secs == 1 ? 'sec' : 'secs'}" if secs > 0
 
-uptime = parts.empty? ? "0 secs" : parts.join(" ")
+uptime = parts.empty? ? "0 mins" : parts.join(" ")
 # memory (it works so dont complain)
 mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
