@@ -8,7 +8,6 @@ distro = "Android"
 
 # uptime
 uptime = `uptime -p`.strip.gsub(",", "").sub(/^up /, "")
-# ai slop (lets see if it works)
 def pluralize(count, singular, plural = nil)
   plural ||= "#{singular}s"
   count == 1 ? "#{count} #{singular}" : "#{count} #{plural}"
