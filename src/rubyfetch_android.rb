@@ -8,7 +8,16 @@ distro = "Android"
 
 # uptime
 uptime = `uptime -p`.strip.gsub(",", "").sub(/^up /, "")
-
+# ai slop (lets see if it works)
+def pluralize(count, singular, plural = nil)
+  plural ||= "#{singular}s"
+  count == 1 ? "#{count} #{singular}" : "#{count} #{plural}"
+end
+parts = uptime.scan(/(\d+)\s+(year|month|week|day|hour|minute)/)
+formatted_parts = parts.map do |count, unit|
+  pluralize(count.to_i. unit)
+end
+uptime = formatted_parts.join(" ")
 # memory (it works so dont complain)
 mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
