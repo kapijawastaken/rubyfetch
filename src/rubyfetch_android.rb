@@ -15,7 +15,7 @@ def pluralize(count, singular, plural = nil)
 end
 parts = uptime.scan(/(\d+)\s+(year|month|week|day|hour|minute)/)
 formatted_parts = parts.map do |count, unit|
-  pluralize(count.to_i. unit)
+  pluralize(count.to_i, unit)
 end
 uptime = formatted_parts.join(" ")
 # memory (it works so dont complain)
