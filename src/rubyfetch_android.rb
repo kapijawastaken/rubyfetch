@@ -17,9 +17,10 @@ parts = uptime.scan(/(\d+)\s+(year|month|week|day|hour|minute)/)
 formatted_parts = parts.map do |count, unit|
   pluralize(count.to_i, unit)
 end
-uptime = formatted_parts.join(" ")
+uptime = formatted_parts.join(" ").sub("ute", "")
+
 # memory (it works so dont complain)
-mem = `free`.gsub(/^(Swap:).+/, "").gsub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
+mem = `free`.sub(/^(Swap:).+/, "").sub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
 used = mem.gsub(/^\d+/, "").strip.to_f / (1024**2)
 total2 = total.to_s.strip.gsub(/(?<=^\d\.\d{2}).*/, "").to_f.round(1).to_s
