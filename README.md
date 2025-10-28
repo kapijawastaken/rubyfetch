@@ -10,17 +10,5 @@ A blazing fast sysfetch written in Ruby!
 # Instructions
 ```
 gem install rake
-git clone https://github.com/kapijawastaken/rubyfetch
-rake (your OS)
-rubyfetch
+rake
 ```
-# OS Selection
-To actually install this, you will need to select your OS. The available options are:
-* linux_x86_64_glibc
-* linux_x86_64_musl
-* linux_arm64_glibc
-* linux_arm64_musl
-* android
-* macos
-* bsd
-* windows_x86_64 (doesnt work)
