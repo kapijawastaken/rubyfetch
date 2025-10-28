@@ -19,7 +19,7 @@ task :default do
       print "Copying logos..."
       `cp -r ./src/logos ~/.local/share/rubyfetch/`
       puts "done"
-    
+   
     # Linux
     else
       
@@ -118,6 +118,7 @@ task :default do
         `cp -r ./src/logos ~/.local/share/rubyfetch/`
         puts "done"
       end
+   end
   end
 
   # BSD
@@ -154,5 +155,4 @@ task :default do
     puts "done"
   end
 
-end
 end
