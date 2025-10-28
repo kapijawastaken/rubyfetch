@@ -76,5 +76,4 @@ else
   ascii = File.read("#{logos}bsd")
   puts ascii
 
-
 end
