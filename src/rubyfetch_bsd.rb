@@ -66,6 +66,16 @@ elsif distro.include?("OpenBSD")
   ascii = File.read("#{logos}openbsd")
   puts ascii
 
+  if distro.include?("DragonflyBSD")
+  puts "\e[1m\e[31m"+user
+  puts "\e[1m\e[31mdistro\e[0m "+distro
+  puts "\e[1m\e[31mkernel\e[0m "+kernel
+  puts "\e[1m\e[31mshell\e[0m "+shell
+  puts "\e[1m\e[31muptime\e[0m "+uptime
+  puts "\e[1m\e[31mmemory\e[0m "+memory
+  ascii = File.read("#{logos}dragonfly")
+  puts ascii
+
 else
   puts "\e[1m\e[31m"+user
   puts "\e[1m\e[31mdistro\e[0m "+distro
