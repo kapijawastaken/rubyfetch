@@ -5,6 +5,7 @@ user = `whoami`.strip+"@"+`hostname`.strip+"\n--------------------"
 kernel = `uname -r`
 shell = ENV["SHELL"].gsub(/^.+\//, "")
 distro = File.read("/etc/os-release").gsub(/^(?!.*PRETTY_NAME=).*/, "").strip.gsub("PRETTY_NAME=", "").gsub("\"", "")
+
 # uptime math
 seconds = File.read("/proc/uptime").gsub(/\..+/, "").strip.to_i
 years = seconds / 31536000

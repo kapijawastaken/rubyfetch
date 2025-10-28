@@ -19,11 +19,11 @@ end
 uptime = formatted_parts.join(" ").sub("ute", "")
 
 # memory (it works so dont complain)
-mem = `free`.sub(/^(Swap:).+/, "").sub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
+memory = `free`.sub(/^(Swap:).+/, "").sub(/^\s.+/, "").strip.gsub("Mem:", "").strip.gsub(/^(\s*\d+\s+\d+).*/, '\1')
 total = mem.gsub(/(?<=\s)\d+/, "").strip.to_f / (1024**2)
 used = mem.gsub(/^\d+/, "").strip.to_f / (1024**2)
-total2 = total.to_s.strip.gsub(/(?<=^\d\.\d{2}).*/, "").to_f.round(1).to_s
-used2 = used.to_s.strip.gsub(/(?<=^\d\.\d{2}).*/, "").to_f.round(1).to_s
+total = total.to_s.strip.gsub(/(?<=^\d\.\d{2}).*/, "").to_f.round(1).to_s
+used = used.to_s.strip.gsub(/(?<=^\d\.\d{2}).*/, "").to_f.round(1).to_s
 memory = used2+" GB / "+total2+" GB"
 
 # reset formatting when exiting
