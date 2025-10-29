@@ -9,6 +9,8 @@
 
 # Instructions
 ```
+git clone https://github.com/kapijawastaken/rubyfetch
+cd rubyfetch
 gem install rake
 rake
 ```
